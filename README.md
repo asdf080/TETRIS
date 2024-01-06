@@ -1,7 +1,7 @@
 # TETRIS
 
 ### 🔗링크
-https://asdf080.github.io/JUMPING-DUCK/
+https://asdf080.github.io/TETRIS/
 
 ### 🔎소개
 바닐라 JS로 만든 테트리스 게임입니다.

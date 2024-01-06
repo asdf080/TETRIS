@@ -74,6 +74,7 @@ function 블록제작(방향="") {
         clearInterval(하강인터벌)
         show게임오버()
         최고점수.innerHTML = Math.max(최고점수.innerHTML, score)
+        localStorage.setItem('bScore', 최고점수.innerHTML);
       }
       setTimeout(() => {
         블록제작('retry');
@@ -191,3 +192,9 @@ document.addEventListener("keydown", (e) => {
       break;
   }
 })
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  // 저장된 점수가 있으면 표시, 없으면 0으로 설정
+  document.querySelector('.bScore').textContent = localStorage.getItem('bScore') || '0';
+});

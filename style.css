@@ -57,14 +57,13 @@ header h1 {
   margin-bottom: 40px;
 }
 
-header #line {
-  font-size: 36px;
+header div {
+  margin-bottom: 20px;
 }
 
-header .score {
+header div .article {
   text-align: center;
   font-size: 36px;
-  margin-bottom: 20px;
 }
 
 .playGround > ul {

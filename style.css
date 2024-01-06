@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+.gameTxt {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  top: 0;
+  left: 0;
+  color:#fff;
+  font-size: 50px;
+}
+
+.gameTxt > button {
+  padding: 10px;
+  color: #fff;
+  background: salmon;
+  border: none;
+  cursor: pointer;
+}
+
+.score {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.playGround > ul {
+  border: 1px solid black;
+  width: 250px;
+  margin: 0 auto;
+}
+
+.playGround > ul > li { /* 세로줄 */
+  width: 100%;
+  height: 25px;
+}
+
+.playGround > ul > li > ul { /* 가로줄 */
+  display: flex;
+}
+
+.playGround > ul > li > ul > li { /* 가로줄 안의 네모칸*/
+  width: 25px;
+  height: 25px;
+  outline: 1px solid #ddd;
+}
+
+.square {
+  background: #61BCFF;
+}
+.bar {
+  background: #ff6f85;
+}
+.tree {
+  background: #D980FA;
+}
+.zeeLeft {
+  background: #ffaf40;
+}
+.zeeRight {
+  background: #fff200;
+}
+.elLeft {
+  background: #fdb1b1;
+}
+.elRight {
+  background: #3ae374;
+}

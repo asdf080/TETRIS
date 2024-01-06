@@ -66,8 +66,16 @@ header div .article {
   font-size: 36px;
 }
 
+header #desc {
+  font-size: 20px;
+}
+
+header #desc span {
+  border: 2px solid black;
+  padding: 5px;
+}
+
 .playGround > ul {
-  /* border: 1px solid black; */
   width: 250px;
   margin: 0 auto;
 }

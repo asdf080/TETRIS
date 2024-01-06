@@ -2,9 +2,11 @@
 import BLOCKS from "./block.js"
 
 const playGroundUl = document.querySelector(".playGround > ul");
-const gameTxt = document.querySelector(".gameTxt");
+const gameTxt = document.querySelector(".gameTxtOver");
+const gameStart = document.querySelector(".gameTxtStart");
 const scoreDisplay = document.querySelector(".score");
 const 다시시작버튼 = document.querySelector(".gameTxt > button");
+const 최고점수 = document.querySelector(".bScore")
 
 // 변수
 const GAME_ROWS = 20; //세로 20
@@ -23,8 +25,15 @@ const movingItem = {
   left: 0,
 };
 
-// 함수
-init();
+// 시작함수
+if(window.getComputedStyle(gameStart).display == "flex"){
+  document.addEventListener("keydown", function(event) {
+    if (event.keyCode === 13) {
+      init();
+      gameStart.style.display= "none";
+    }
+  })
+}
 
 function init() {
   tempMovingItem = { ...movingItem };
@@ -64,6 +73,7 @@ function 블록제작(방향="") {
       if(방향 === 'retry'){
         clearInterval(하강인터벌)
         show게임오버()
+        최고점수.innerHTML = Math.max(최고점수.innerHTML, score)
       }
       setTimeout(() => {
         블록제작('retry');
@@ -154,19 +164,21 @@ function show게임오버() {
 다시시작버튼.addEventListener("click", () => {
   playGroundUl.innerHTML = "";
   gameTxt.style.display = "none"
+  score = 0;
+  scoreDisplay.innerText = 0;
   init()
 })
 
 // 방향키로 블록 이동
 document.addEventListener("keydown", (e) => {
   switch (e.keyCode) {
-    case 39: // 아래
+    case 39: // 오른쪽
       블록이동("left", 1);
       break;
-    case 37: // 오른쪽
+    case 37: // 왼쪽
       블록이동("left", -1);
       break;
-    case 40: // 왼쪽
+    case 40: // 아래
       블록이동("top", 1);
       break;
     case 38: // 위
@@ -178,4 +190,4 @@ document.addEventListener("keydown", (e) => {
     default:
       break;
   }
-});
+})

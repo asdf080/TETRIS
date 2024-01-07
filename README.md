@@ -21,4 +21,4 @@ https://asdf080.github.io/TETRIS/
 ![preview](./img/preview2.png)
 
 
-![preview](./img/preview3.png)
+![preview](./img/preview4.png)

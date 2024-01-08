@@ -18,7 +18,7 @@ https://asdf080.github.io/TETRIS/
 ![preview](./img/preview1.png)
 
 
-![preview](./img/preview2.png)
+![preview](./img/preview_A.png)
 
 
-![preview](./img/preview4.png)
+![preview](./img/preview_B.png)

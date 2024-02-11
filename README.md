@@ -14,6 +14,11 @@ https://asdf080.github.io/TETRIS/
 - CSS
 - JavaScript
 
+### 🎈주요 기능
+- createElement, childNodes 등 DOM 제어를 이용한 블록 생성
+- childNodes를 이용한 한줄 완성 체크
+- 로컬 스토리지를 이용한 점수 저장
+
 ### ✔ 미리보기
 ![preview](./img/preview1.png)
 
